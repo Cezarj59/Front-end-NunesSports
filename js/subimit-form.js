@@ -76,7 +76,7 @@ function handleErroCadastro(error) {
 }
 
 function exibirMensagemErro(mensagem) {
-    const mensagemElement = document.getElementById("mensagemErro");
+    const mensagemElement = document.getElementById("modal-mensagem");
     mensagemElement.innerHTML = mensagem;
 
     modalErro.show();
