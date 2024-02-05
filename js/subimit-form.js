@@ -42,7 +42,7 @@ function validarDadosDoFormulario(productData) {
 }
 
 function cadastrarProduto(productData) {
-    fetch('http://localhost:3001/products/cadastrar', {
+    fetch('https://nunes-sports-axl7.onrender.com/products/cadastrar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

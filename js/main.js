@@ -1,5 +1,5 @@
 // Fazer uma requisição GET para a API
-fetch('http://localhost:3001/products/listar')
+fetch('https://nunes-sports-axl7.onrender.com/products/listar')
     .then(response => response.json())
     .then(data => {
         // Manipular o DOM para exibir os dados
@@ -42,7 +42,7 @@ function exibirModalConfirmacao(confirmCallback) {
 }
 
 function fazerRequisicaoExclusao(productId) {
-    fetch(`http://localhost:3001/products/deletar/${productId}`, {
+    fetch(`https://nunes-sports-axl7.onrender.com/products/deletar/${productId}`, {
         method: 'DELETE',
     })
         .then(response => {
@@ -84,7 +84,7 @@ var editModal = new bootstrap.Modal(document.getElementById('editModal'));
 function abrirFormularioEdicao(productId) {
     // Fazer uma requisição GET para a API para obter os detalhes do produto
 
-    fetch(`http://localhost:3001/products/buscar/${productId}`)
+    fetch(`https://nunes-sports-axl7.onrender.com/products/buscar/${productId}`)
         .then(response => response.json())
         .then(product => {
             // Preencher o modal com os detalhes do produto
@@ -126,7 +126,7 @@ function obterDadosProduto() {
 }
 
 function enviarRequisicaoAPI(productId, dadosProduto) {
-    fetch(`http://localhost:3001/products/atualizar/${productId}`, {
+    fetch(`https://nunes-sports-axl7.onrender.com/products/atualizar/${productId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
