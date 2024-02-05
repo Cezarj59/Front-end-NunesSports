@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Nunes Sports</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">Cadastro de Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./listagem-de-produtos.html">Produtos Cadastrados</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <h4>Lista de produtos cadastrados</h4>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nome:</th>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th colspan="2" class="text-center w-25">Opções</th>
+                </tr>
+            </thead>
+            <tbody id="productList">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para o formulário de edição -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Editar Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Seu formulário de edição vai aqui -->
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="edit-nome" placeholder="Nome">
+                        <label for="edit-nome">Nome</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="edit-codigo" placeholder="Código">
+                        <label for="edit-codigo">Código</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="edit-descricao" placeholder="Descrição">
+                        <label for="edit-descricao">Descrição</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="edit-preco" placeholder="Preço">
+                        <label for="edit-preco">Preço</label>
+                    </div>
+                    <!-- Adicione mais campos conforme necessário -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+
+                    <button type="button" class="btn btn-primary" id="btnSalvarEdicao" onclick="editarProduto()">Salvar
+                        Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmDeleteModalLabel">Exclusão de Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tem certeza de que deseja excluir este produto?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="confirmDeleteButton" type="button" class="btn btn-danger">Confirmar Exclusão</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Novo Modal para Mensagem de Sucesso -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">Sucesso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modal-mensagem"></p>
+                </div>
+                <div class="modal-footer">
+                    <button id="ok-button" type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
