@@ -9,7 +9,7 @@
 
 ## Descrição do Projeto
 
-O projeto Nunes Sports consiste em uma aplicação web para cadastro e listagem de produtos. O Front-end está desenvolvido em HTML, CSS e JavaScript, utilizando o framework Bootstrap. Os dados são gerenciados por uma API Back-end hospedada no [Back-end-NunesSports](https://api-back-end-nunessports.onrender.com/). A aplicação Front-end está hospedada no GitHub Pages e pode ser acessada [aqui](https://cezarj59.github.io/Front-end-NunesSports/).
+O projeto Nunes Sports consiste em uma aplicação web para cadastro e listagem de produtos. O Front-end está desenvolvido em HTML, CSS e JavaScript, utilizando o framework Bootstrap. Os dados são gerenciados por uma API Back-end hospedada no [Back-end-NunesSports](https://github.com/Cezarj59/Back-end-NunesSports). A aplicação Front-end está hospedada no GitHub Pages e pode ser acessada [aqui](https://cezarj59.github.io/Front-end-NunesSports/).
 
 
 ## Estrutura do Projeto
